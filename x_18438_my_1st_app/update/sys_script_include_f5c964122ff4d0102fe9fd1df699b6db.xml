@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_18438_my_1st_app.PlaidGetItem</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>PlaidGetItem</name>
+        <script><![CDATA[var PlaidGetItem = Class.create();
+PlaidGetItem.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+getItem: function() {
+   var restMes = new sn_ws.RESTMessageV2();
+ restMes.setEndpoint('https://sandbox.plaid.com/item/get');
+ restMes.setHttpMethod('post');
+ restMes.setRequestHeader('Accept','application/json');
+ restMes.setRequestHeader('Content-Type','application/json');
+ var body = 'client_id=5ebf5ba5fff2fe00139a2d89&secret=98ddbe818db30efeea70037a2f6fb3&access_token=access-sandbox-b608c008-4fe0-4baa-877c-3f2d175fa429';
+ restMes.setRequestBody(body);
+ var response = restMes.execute();
+ var resBody = response.getBody();
+ var parseBody = JSON.parse(resBody);
+ return resBody;
+//return "Murali L"; 
+},
+    type: 'PlaidGetItem'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-17 16:49:19</sys_created_on>
+        <sys_id>f5c964122ff4d0102fe9fd1df699b6db</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>PlaidGetItem</sys_name>
+        <sys_package display_value="My 1st App" source="x_18438_my_1st_app">e52b06f42fb010102fe9fd1df699b6cb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="My 1st App">e52b06f42fb010102fe9fd1df699b6cb</sys_scope>
+        <sys_update_name>sys_script_include_f5c964122ff4d0102fe9fd1df699b6db</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-17 18:39:21</sys_updated_on>
+    </sys_script_include>
+</record_update>

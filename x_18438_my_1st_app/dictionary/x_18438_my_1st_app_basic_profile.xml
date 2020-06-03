@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="use_document_viewer" label="Basic Profile" max_length="40" name="x_18438_my_1st_app_basic_profile" sizeclass="1" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Account" max_length="40" name="account" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Email" max_length="100" name="email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="First Name" max_length="100" name="first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Item" max_length="40" name="item" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" max_length="100" name="last_name" type="string"/>
+        <element label="My Attachment" max_length="40" name="my_attachment" type="file_attachment"/>
+    </element>
+</database>
